@@ -24,6 +24,10 @@ public class CacheScopeDemo {
 
     private static final String CACHE_NAME = "jday2015";
     
+    static {
+        System.setProperty("hazelcast.logging.type", "none");
+    }
+    
     public static void main(String[] args) throws URISyntaxException {
         // Get the JCache API implementation (we have only one in the classpath).
         CachingProvider cachingProvider = Caching.getCachingProvider();

@@ -18,6 +18,10 @@ public class CacheOperationsDemo {
 
     private static final String CACHE_NAME = "jday2015";
     
+    static {
+        System.setProperty("hazelcast.logging.type", "none");
+    }
+    
     public static void main(String[] args) {
         CachingProvider cachingProvider = Caching.getCachingProvider();
         CacheManager cacheManager = cachingProvider.getCacheManager();

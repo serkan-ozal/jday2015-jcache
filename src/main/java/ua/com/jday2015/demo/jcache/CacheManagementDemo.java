@@ -16,6 +16,10 @@ public class CacheManagementDemo {
 
     private static final String CACHE_NAME = "jday2015";
     
+    static {
+        System.setProperty("hazelcast.logging.type", "none");
+    }
+    
     public static void main(String[] args) {
         // Get the all existing JCache API implementation in the classpath. 
         for (CachingProvider cachingProvider : Caching.getCachingProviders()) {

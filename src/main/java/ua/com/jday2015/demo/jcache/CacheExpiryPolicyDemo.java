@@ -21,6 +21,10 @@ public class CacheExpiryPolicyDemo {
 
     private static final String CACHE_NAME = "jday2015";
     
+    static {
+        System.setProperty("hazelcast.logging.type", "none");
+    }
+    
     public static void main(String[] args) throws InterruptedException {
         final int EXPIRATION_TIME_IN_SECONDS = 3;
         
@@ -64,6 +68,8 @@ public class CacheExpiryPolicyDemo {
         Thread.sleep((EXPIRATION_TIME_IN_SECONDS + 1) * 1000);
         
         System.out.println("Get value with key \"1\": " + cache.get(1) + " [must be null]");
+        
+        // *************************************************************************** //
         
         // Close caching provider. 
         // This also closes all owned cache managers and destroys theirs owned caches.
