@@ -42,7 +42,7 @@ public class CacheOperationsDemo {
         final int ENTRY_COUNT = 3;
         
         for (int i = 1; i <= ENTRY_COUNT; i++) {
-            cache.put(i + 1, "Value-1");
+            cache.put(i, "Value-" + i);
             System.out.println("Put key \"" + i + "\" with value \"Value-" + i + "\"");
         }
         
