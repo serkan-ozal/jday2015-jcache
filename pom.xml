@@ -18,10 +18,8 @@
         <maven.resources.plugin.version>2.4</maven.resources.plugin.version>
 		
 		<jsr107.api.version>1.0.0</jsr107.api.version>
-		<hazelcast.version>3.5</hazelcast.version>
+		<hazelcast.version>3.5.2</hazelcast.version>
 		<infinispan.version>8.0.0.Final</infinispan.version>
-		<junit-version>4.8.2</junit-version>
-		<easymock-version>3.0</easymock-version>
     </properties>
   
   	<build>
@@ -72,19 +70,6 @@
 			<version>${infinispan.version}</version>
 		</dependency>
 		-->
-		
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit-version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.easymock</groupId>
-			<artifactId>easymock</artifactId>
-			<version>${easymock-version}</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 </project>
